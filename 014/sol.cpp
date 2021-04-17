@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int number = 1000000;
+    const int number = 1000000;
     long temp, count, res;
     long max = 0;
     
