@@ -16,6 +16,6 @@ int main() {
                 factors += 2;
             }
         }
-	}
+    }
     std::cout << number;
 }
