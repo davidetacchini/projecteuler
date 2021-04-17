@@ -13,4 +13,3 @@ for n in count(1):
         break
 
 print(res)
-

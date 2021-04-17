@@ -14,4 +14,3 @@ for i, name in enumerate(names, start=1):
     res += i * summ
 
 print(res)
-

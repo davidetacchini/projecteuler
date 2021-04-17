@@ -11,4 +11,3 @@ int main() {
     }
     std::cout << sum * sum - sum_of_squares;
 }
-

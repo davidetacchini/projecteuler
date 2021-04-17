@@ -10,4 +10,3 @@ int main() {
     }
     std::cout << sol;
 }
-

@@ -19,4 +19,3 @@ int main() {
 	}
     std::cout << number;
 }
-

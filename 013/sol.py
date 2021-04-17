@@ -8,4 +8,3 @@ for number in numbers.split("\n"):
         res += int(number)
 
 print(str(res)[:10])
-

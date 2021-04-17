@@ -3,8 +3,10 @@
 #include <string>
 
 std::vector<std::string> start {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-std::vector<std::string> middle {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
-std::vector<std::string> end {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+std::vector<std::string> middle {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+                                 "sixteen", "seventeen", "eighteen", "nineteen"};
+std::vector<std::string> end {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+                              "eighty", "ninety"};
 
 std::string number_to_string(int number) {
     for (int i = 1; i <= number; i++) {
@@ -28,10 +30,8 @@ int main() {
 
     for (int i = 1; i <= number; i++) {
         str = number_to_string(i);
-        std::cout << str << "\n";
         sum += str.length();
     }
 
     std::cout << sum;
 }
-
