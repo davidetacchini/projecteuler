@@ -31,7 +31,7 @@ int main () {
     int sum, product;
  
     bool found = false;
-    while(!found) {
+    while (!found) {
         for (int n = 1; n < m; n++) {
             if (are_coprime(m, n)) {
                 tr = make_triple(tr, n, m);
