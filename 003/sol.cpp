@@ -7,9 +7,8 @@ int main() {
     while (number > 1) {
         if (number % divider == 0) {
             number /= divider;
-        }
-        else {
-            divider += 1;
+        } else {
+            divider++;
         }
     }
     std::cout << divider;
