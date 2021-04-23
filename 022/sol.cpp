@@ -16,7 +16,7 @@ int main() {
     while ((pos = str.find(",")) != std::string::npos) {
         std::string name = str.substr(0, pos);
         names.push_back(name);
-        // +1 = delimeter length
+        // +1 = delimiter length
         str.erase(0, pos + 1); 
     }
 
