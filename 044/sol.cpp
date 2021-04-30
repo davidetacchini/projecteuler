@@ -23,7 +23,7 @@ int main() {
     int res;
 
     for (int i = 0; i < pents.size(); i++) {
-        for (int j = 1; j < pents.size(); j++) {
+        for (int j = 1; j < i; j++) {
             int sum = pents[i] + pents[j];
             int diff = pents[i] - pents[j];
             if (is_pentagonal(sum) && is_pentagonal(diff)) {
