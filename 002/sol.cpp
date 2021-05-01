@@ -7,10 +7,7 @@ int main() {
     int n1 = 0;
     int n2 = 1;
 
-    while (true) {
-        if (n1 >= max) {
-            break;
-        }
+    while (n1 < max) {
         sum = n1 + n2;
         if (sum % 2 == 0) {
             sol += sum;
