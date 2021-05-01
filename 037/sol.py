@@ -1,5 +1,3 @@
-from math import trunc
-
 def is_prime(n):
     if n <= 3:
         return n > 1
@@ -17,7 +15,7 @@ def is_truncatable(n):
     length = len(str(n))
     for i in range(1, length):
         l = int(str(n)[i:])
-        r = trunc(n / (10 ** i))
+        r = n // 10 ** i
         if (is_prime(l) and is_prime(r)):
             count += 1
     return length == count
