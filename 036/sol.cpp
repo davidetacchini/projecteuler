@@ -34,5 +34,5 @@ int main() {
             sum += i;
         }
     }
-    std::cout << sum << '\n';
+    std::cout << sum;
 }

@@ -1,6 +1,6 @@
-factorial = 1;
+fact = 1;
 
 for i in range(1, 100):
-    factorial *= i
+    fact *= i
 
-print(sum(int(n) for n in str(factorial)))
+print(sum(int(n) for n in str(fact)))

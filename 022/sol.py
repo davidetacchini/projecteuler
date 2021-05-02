@@ -1,8 +1,7 @@
 with open("names.txt", "r") as fp:
     names = fp.read()
 
-new = names.split(',')
-names = sorted(new)
+names = sorted(names.split(','))
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 res = 0

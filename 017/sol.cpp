@@ -2,11 +2,12 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> start {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-std::vector<std::string> middle {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
-                                 "sixteen", "seventeen", "eighteen", "nineteen"};
-std::vector<std::string> end {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
-                              "eighty", "ninety"};
+typedef std::vector<std::string> vs;
+
+vs start {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+vs middle {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", 
+           "seventeen", "eighteen", "nineteen"};
+vs end {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 
 std::string number_to_string(int number) {
     for (int i = 1; i <= number; i++) {
@@ -24,14 +25,13 @@ std::string number_to_string(int number) {
 }
 
 int main() {
-    const int number = 1000;
+    const int n = 1000;
     std::string str;
     int sum = 0;
 
-    for (int i = 1; i <= number; i++) {
+    for (int i = 1; i <= n; i++) {
         str = number_to_string(i);
         sum += str.length();
     }
-
     std::cout << sum;
 }

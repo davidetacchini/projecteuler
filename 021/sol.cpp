@@ -13,14 +13,14 @@ int sum_of_factors(int number) {
 int main() {
     const int limit = 10000;
     int sum, sum1;
-    int result = 0;
+    int res = 0;
 
     for (int i = 1; i < limit; i++) {
         sum = sum_of_factors(i);
         sum1 = sum_of_factors(sum);
         if (i == sum1 && sum != sum1) {
-            result += i;
+            res += i;
         }
     }
-    std::cout << result;
+    std::cout << res;
 }

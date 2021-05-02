@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main() {
-    const int number = 1000000;
+    const int n = 1000000;
     long temp, count, res;
     long max = 0;
     
-    for (int i = 2; i < number; i++) {
+    for (int i = 2; i < n; i++) {
         count = 0;
         temp = i;
         while (temp > 1) {
@@ -16,12 +16,10 @@ int main() {
             }
             count++;
         }
-        std::cout << "Number: " << i << "\t"
-                  << "Count: " << count << "\n";
         if (count > max) {
             max = count;
             res = i;
         }
     }
-    std::cout << res << " " << max;
+    std::cout << res;
 }
