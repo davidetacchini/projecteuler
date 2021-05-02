@@ -10,16 +10,22 @@ def is_prime(n):
         i += 6
     return True
 
-res = 1 # counting 1 for number 2
-for i in range(3, 10**6, 2):
+def get_count(s):
     count = 0
-    if is_prime(i):
-        s = str(i)
-        for i in range(len(s)):
-            circle = int(s[i:] + s[:i])
-            if is_prime(circle):
-                count += 1
-        if count == len(s):
-            res += 1
+    for i in range(len(s)):
+        circle = int(s[i:] + s[:i])
+        if is_prime(circle):
+            count += 1
+    return count
 
-print(res)
+def solve():
+    res = 1
+    for i in range(3, 10**6, 2):
+        if is_prime(i):
+            s = str(i)
+            if get_count(s) == len(s):
+                res += 1
+    return res
+
+if __name__ == "__main__":
+    print(solve())

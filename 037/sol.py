@@ -20,13 +20,14 @@ def is_truncatable(n):
             count += 1
     return length == count
 
-count = 0
-result = 0
-i = 11
-while count < 11:
-    if is_prime(i) and is_truncatable(i):
-        count += 1
-        result += i
-    i += 2
+def solve():
+    count, res, i = 0, 0, 11
+    while count < 11:
+        if is_prime(i) and is_truncatable(i):
+            count += 1
+            res += i
+        i += 2
+    return res
 
-print(result)
+if __name__ == "__main__":
+    print(solve())

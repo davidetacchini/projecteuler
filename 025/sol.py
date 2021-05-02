@@ -7,9 +7,12 @@ def fib(n):
         return n
     return fib(n-1) + fib(n-2)
 
-for n in count(1):
-    if len(str(fib(n))) >= 1000:
-        res = n
-        break
+def solve():
+    for n in count(1):
+        if len(str(fib(n))) >= 1000:
+            res = n
+            break
+    return res
 
-print(res)
+if __name__ == "__main__":
+    print(solve())

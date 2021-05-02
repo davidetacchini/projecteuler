@@ -8,10 +8,13 @@ def has_same_digits(n):
             count += 1
     return count == 5
 
-i = 1
-while True:
-    if has_same_digits(i):
-        break
-    i += 1
+def solve():
+    i = 1
+    while True:
+        if has_same_digits(i):
+            break
+        i += 1
+    return i
     
-print(i)    
+if __name__ == "__main__":
+    print(solve())

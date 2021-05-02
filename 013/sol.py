@@ -1,9 +1,12 @@
-with open("./numbers.txt", "r") as fp:
-    numbers = fp.read()
+def solve():
+    with open("numbers.txt", "r") as fp:
+        file = fp.read()
 
-res = 0
-for number in numbers.split("\n"):
-    if number:
-        res += int(number)
+    res = 0
+    for number in file.split('\n'):
+        if number:
+            res += int(number)
+    return str(res)[:10]
 
-print(str(res)[:10])
+if __name__ == "__main__":
+    print(solve())

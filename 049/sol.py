@@ -28,14 +28,19 @@ def get_permutations(n):
             perms.append(p)
     return perms
 
-primes = generate_primes()
+def solve():
+    res = []
+    primes = generate_primes()
+    for prime in primes:
+        perms = get_permutations(prime)
+        for i in range(len(perms)):
+            for j in range(i):
+                for k in range(j):
+                    a, b, c = perms[i], perms[j], perms[k]
+                    s = str(a) + str(b) + str(c)
+                    if a < b < c and (b - a) == (c - b) and s not in res:
+                        res.append(s)
+    return res
 
-# TODO: maybe improve the structure
-for prime in primes:
-    perms = get_permutations(prime)
-    for i in range(len(perms)):
-        for j in range(i):
-            for k in range(j):
-                a, b, c = perms[i], perms[j], perms[k]
-                if a < b < c and b - a == c - b:
-                    print(str(a) + str(b) + str(c))
+if __name__ == "__main__":
+    print(solve())
